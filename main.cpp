@@ -1,11 +1,57 @@
-#include<iostream>
+#include<bits/stdc++.h>
+
 
 using namespace std;
 
 
+struct ListNode {
+           int val;
+           ListNode *next;
+           ListNode() : val(0), next(nullptr) {}
+           ListNode(int x) : val(x), next(nullptr) {}
+           ListNode(int x, ListNode *next) : val(x), next(next) {}
+       };
+
 class Solution {
 public:
   
+    // 217. Contains Duplicate
+    /*
+    Given an integer array nums, 
+    return true if any value appears at least twice in the array, 
+    and return false if every element is distinct.
+
+    Ex: 1
+    Input: nums = [1,2,3,1]
+    Output: true
+
+    Ex: 2
+    Input: nums = [1,2,3,4]
+    Output: false
+
+    Ex: 3
+    Input: nums = [1,1,1,3,3,4,3,2,4,2]
+    Output: true
+
+    */
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_map<int,int> duplicate;
+        
+        for(const auto& a : nums)
+        {
+            try
+            {
+                duplicate.at(a);
+                return true;
+            }
+            catch(exception& e)
+            {
+                duplicate[a] = 1;
+            }
+        }
+        return false;
+    }
+
     // 21. Merge Two Sorted Lists
     /*
     Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
@@ -145,5 +191,9 @@ int main()
   Solution s;
   // 21. Merge Two Sorted Lists [ Easy ] [ Linked List ]
   // mergeTwoLists();
+
+  // 217. Contains Duplicate
+  // containsDuplicate
+
   return 0;
 }
