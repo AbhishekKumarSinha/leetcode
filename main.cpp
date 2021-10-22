@@ -55,12 +55,15 @@ public:
     // 21. Merge Two Sorted Lists
     /*
     Merge two sorted linked lists and return it as a sorted list. The list should be made by splicing together the nodes of the first two lists.
+    
     Ex: 1
     Input: l1 = [1,2,4], l2 = [1,3,4]
     Output: [1,1,2,3,4,4]
+    
     Ex: 2
     Input: l1 = [], l2 = []
     Output: []
+    
     Ex: 3
     Input: l1 = [], l2 = [0]
     Output: [0]
@@ -184,6 +187,55 @@ public:
         return head;
         
     }
+
+    // 53. Maximum Subarray
+    /*
+    Given an integer array nums, 
+    find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+    A subarray is a contiguous part of an array.
+
+    Ex: 1
+    Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+    Output: 6
+    Explanation: [4,-1,2,1] has the largest sum = 6.
+
+
+    Ex: 2
+    Input: nums = [1]
+    Output: 1
+
+
+    Ex: 3
+    Input: nums = [1]
+    Output: 1
+
+    Constraints
+    1 <= nums.length <= 105
+    -104 <= nums[i] <= 104
+
+    */
+
+    int maxSubArray(vector<int>& nums) {
+        
+        long max_sub = nums[0];
+        long current_sum = 0;
+        
+        for(const auto& a : nums)
+        {
+            if(current_sum < 0)
+            {
+                current_sum = 0;
+            }
+            
+            current_sum += a;
+            max_sub = max(max_sub, current_sum);
+        }
+        
+        return max_sub;
+    }
+
+
 };
 
 int main()
@@ -192,8 +244,12 @@ int main()
   // 21. Merge Two Sorted Lists [ Easy ] [ Linked List ]
   // mergeTwoLists();
 
-  // 217. Contains Duplicate
+  // 217. Contains Duplicate [ Easy ] [ Array ]
   // containsDuplicate
+
+  // 53. Maximum Subarray [ Easy ] [ Array ]
+  // maxSubArray();
+
 
   return 0;
 }
