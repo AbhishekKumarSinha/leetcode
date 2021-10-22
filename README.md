@@ -6,3 +6,4 @@ LeetCode Solutions by me
 -  53\. Maximum Subarray          [ Easy ] [ Array ]
 - 217\. Contains Duplicate        [ Easy ] [ Array ]
 -  1\. Two Sum                    [ Easy ] [ Array ]
+- 88\. Merge Sorted Array
