@@ -7,3 +7,4 @@ LeetCode Solutions by me
 - 217\. Contains Duplicate        [ Easy ] [ Array ]
 -  1\. Two Sum                    [ Easy ] [ Array ]
 - 88\. Merge Sorted Array         [ Easy ] [ Array ]
+- 118\. Pascal's Triangle         [ Easy ] [ Array ] [ Dynamic Programming ]
