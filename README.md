@@ -8,3 +8,4 @@ LeetCode Solutions by me
 -  1\. Two Sum                    [ Easy ] [ Array ]
 - 88\. Merge Sorted Array         [ Easy ] [ Array ]
 - 118\. Pascal's Triangle         [ Easy ] [ Array ] [ Dynamic Programming ]
+- 283\. Move Zeroes               [ Easy ] [ Array ]
